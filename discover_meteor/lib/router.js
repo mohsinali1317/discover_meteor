@@ -4,7 +4,7 @@
 Router.configure({
     layoutTemplate: 'layout',
     loadingTemplate: 'loading',
-    waitOn: function() { return Meteor.subscribe('posts');}
+    waitOn: function() { return [Meteor.subscribe('posts'), Meteor.subscribe('notifications')]; }
 });
 Router.map(function() {
     this.route('postsList', {path: '/'});
