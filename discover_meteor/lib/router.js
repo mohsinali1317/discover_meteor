@@ -37,3 +37,5 @@ var requireLogin = function() {
 
 Router.onBeforeAction('loading');
 Router.onBeforeAction(requireLogin, {only: 'postSubmit'});
+
+//Router.onBeforeAction(function() { clearErrors() });
